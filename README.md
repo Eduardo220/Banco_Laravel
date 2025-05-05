@@ -28,11 +28,8 @@
 
 Esse projeto foi desenvolvido por [Eduardo Weissheimer](https://github.com/Eduardo220), e está hospedado no repositório [Banco-Laravel](https://github.com/Eduardo220/Banco_Laravel).
 
-
-
 ## 🛠️ Tecnologias utilizadas:
 <p align="center">
-
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" width="100">   
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" width="100">      
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" width="100">       
