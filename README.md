@@ -22,6 +22,7 @@
 
 5- Acessar o conteúdo do Laravel:
 * [http://127.0.0.1:8000](http://127.0.0.1:8000)
+
 ![Laravel](https://img.shields.io/badge/laravel-%23FF2D20?style=for-the-badge&logo=laravel&logoColor=white) 
 
 # Autor:
@@ -31,7 +32,6 @@ Esse projeto foi desenvolvido por [Eduardo Weissheimer](https://github.com/Eduar
 ## 🛠️ Tecnologias utilizadas:
 <p align="center">
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" width="100">   
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" width="100">      
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" width="100">       
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" width="100">           
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" width="100">       
 </p>
