@@ -10,12 +10,16 @@
 
 # Como rodar o projeto:
 1- Duplicar o arquivo ".env.example" e renomear para ".env";
+
 2- Instalar as dependências do PHP:
 > composer install
+
 3- Gerar a chave no arquivo ".env"
 > php artisan key:generate 
+
 4- Iniciar o projeto criado com o Laravel:
 > php artisan serve
+
 5- Acessar o conteúdo do Laravel:
 * [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
