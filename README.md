@@ -10,4 +10,4 @@
 
 # Autor:
 
-Esse projeto foi desenvolvido por [Eduardo Weissheimer](https://github.com/Eduardo220), e está hospedado no repositório [Banco-Laravel](https://github.com/Eduardo220).
+Esse projeto foi desenvolvido por [Eduardo Weissheimer](https://github.com/Eduardo220), e está hospedado no repositório [Banco-Laravel](https://github.com/Eduardo220/Banco_Laravel).
