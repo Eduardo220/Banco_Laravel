@@ -14,10 +14,15 @@
 2- Alterar as credenciais do banco de dados:
 
 > DB_CONNECTION=mysql
+
 > DB_HOST=127.0.0.1
+
 > DB_PORT=3306
+
 > DB_DATABASE=banco_laravel
+
 > DB_USERNAME=root
+
 > DB_PASSWORD=
 
 3- Instalar as dependências do PHP:
