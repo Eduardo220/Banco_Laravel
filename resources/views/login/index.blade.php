@@ -1,6 +1,6 @@
 <div>
-<header>
-        <h4>Faça seu login para acessar sua conta</h4>
+    <center>
+        <h3>Faça seu login para acessar sua conta</h3>
         <form method="POST" action=" ">
             @csrf
             <div>
@@ -12,5 +12,5 @@
                 <input type="password" name="password" id="password" required>
             </div>
             <button type="submit">Entrar</button>
-    </header>
+    </center>
 </div>
