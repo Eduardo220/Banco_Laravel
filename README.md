@@ -20,6 +20,8 @@
 4- Iniciar o projeto criado com o Laravel:
 > php artisan serve
 
+
+
 5- Acessar o conteúdo do Laravel:
 * [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
