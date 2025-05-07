@@ -1,9 +1,10 @@
+@extends('layouts.admin')
+@section('title', 'Login')
+@section('content')
 <div>
     <center>
-    <h1>Faça seu login para acessar sua conta</h1>
-    @if (session('success'))
-        <p style="color: green;">{{ session('success') }}</p>
-    @endif
+        <h1>Faça seu login para acessar sua conta</h1>
+        <x-alert />
         <form method="POST" action="">
             @csrf
             <div>
