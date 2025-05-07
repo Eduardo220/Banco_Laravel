@@ -34,7 +34,7 @@ class AuthenticationController extends Controller
 
     public function validar(Request $request)
     {
-        $request->validate([
+        $request->validar([
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'phone' => 'required|string|min:11|max:11',
