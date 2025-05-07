@@ -7,16 +7,24 @@
     </head>
     <body>
         <center>
-            <div id="app">
-                <h1>Banco</h1>
-                <p>Welcome to the Banco application!</p>
-            </div>
+            <header>
+                <div id="app">
+                    <h1>Banco</h1>
+                    <h2>Bem vindo à Parkew's Bank!</h2>
+                </div>
+                <div id="login">
+                    <h3>Faça seu login para acessar sua conta: <a href="{{ route('login.index') }}">Login</a></h3>
+                </div>
+                <div id="register">
+                    <h3>Faça seu cadastro para acessar sua conta: <a href="{{ route('register.index') }}">Cadastro</a></h3>
+                </div>
+            </header>
         </center>
     </body>
     <footer>
         <center>
         <p>&copy; 2025 Banco. All rights reserved.</p>
-        <p>Banco is a fictional bank application.</p>
+        <p>Parkew's Bank é um banco ficticio para testes.</p>
         </center>
     </footer>    
 </html>
