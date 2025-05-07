@@ -2,19 +2,24 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Register;
+use App\Models\User;
 use Illuminate\Http\Request;
 
-class RegisterController extends Controller
+class AuthenticationController extends Controller
 {
-    public function index()
+    public function auth_login() 
     {
-        return view('users.register.index'); // Retorna a view de registro
+        return view('authentication.login'); // Retorna a view de login
+    }
+
+    public function auth_register()
+    {
+        return view('authentication.register'); // Retorna a view de registro
     }
 
     public function store(Request $request)
     {
-        Register::create([     // Cria um novo usuário com os dados do formulário
+        User::create([     // Cria um novo usuário com os dados do formulário
             'name' => $request->name,
             'email' => $request->email,
             'phone' => $request->phone,
@@ -24,7 +29,7 @@ class RegisterController extends Controller
             'password' => bcrypt($request->password),
         ]);
 
-        return redirect()->route('login.index')->with('success', 'Usuário registrado com sucesso!'); // Redireciona para a página de login com uma mensagem de sucesso
+        return redirect()->route('authentication.login')->with('success', 'Usuário registrado com sucesso!'); // Redireciona para a página de login com uma mensagem de sucesso
     }
 
     public function validar(Request $request)

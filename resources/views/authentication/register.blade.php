@@ -6,7 +6,7 @@
 <center>
     <div>
         <h1>Faça seu cadastro para acessar sua conta</h1>
-        <form method="POST" action="{{ route('register.store')}}">
+        <form method="POST" action="{{ route('authentication.store')}}">
             @csrf
                 <label for="name">Nome: </label>
                 <input type="text" name="name" id="name" placeholder="Insira seu nome" required><br><br>
