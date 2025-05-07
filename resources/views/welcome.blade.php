@@ -9,8 +9,7 @@
         <center>
             <header>
                 <div id="app">
-                    <h1>Banco</h1>
-                    <h2>Bem vindo à Parkew's Bank!</h2>
+                    <h1>Bem vindo à Parkew's Bank!</h1>
                 </div>
                 <div id="login">
                     <h3>Faça seu login para acessar sua conta: <a href="{{ route('login.index') }}">Login</a></h3>

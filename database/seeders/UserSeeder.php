@@ -16,58 +16,58 @@ class UserSeeder extends Seeder
         if (!User::where('email', 'eduardo@gmail.com')->first()) 
         {
             User::create([
-                'name' => 'Eduardo',
+                'name' => 'Eduardo Weissheimer',
                 'email' => 'eduardo@gmail.com',
                 'password' => '123456#A',
-                'phone' => '11999999999',
+                'phone' => '11996214999',
                 'address' => 'Rua A, 123',
-                'CPF' => '12345678900',
+                'CPF' => '02631766067',
                 'birth_date' => '2004-03-03',
             ]); 
         }
         if (!User::where('email', 'fernanda@gmail.com')->first()) 
         {
             User::create([
-                'name' => 'Fernanda',
+                'name' => 'Fernanda Weissheimer',
                 'email' => 'fernanda@gmail.com',
                 'password' => '123456#A',
-                'phone' => '11999999999',
+                'phone' => '11959991299',
                 'address' => 'Rua A, 123',
-                'CPF' => '11345678900',
+                'CPF' => '00045678900',
                 'birth_date' => '2009-10-25',
             ]); 
         }
         if (!User::where('email', 'gabriela@gmail.com')->first()) 
         {
             User::create([
-                'name' => 'Gabriela',
+                'name' => 'Gabriela Rocha',
                 'email' => 'gabriela@gmail.com',
                 'password' => '123456#A',
-                'phone' => '11999999999',
+                'phone' => '14956199999',
                 'address' => 'Rua A, 123',
-                'CPF' => '12145678900',
+                'CPF' => '02945678900',
                 'birth_date' => '2004-11-03',
             ]); 
         }
         if (!User::where('email', 'roger@gmail.com')->first()) 
         {
             User::create([
-                'name' => 'Roger',
+                'name' => 'Roger Santini',
                 'email' => 'roger@gmail.com',
                 'password' => '123456#A',
-                'phone' => '11999999999',
+                'phone' => '11999562999',
                 'address' => 'Rua A, 123',
-                'CPF' => '12315678900',
+                'CPF' => '02915678900',
                 'birth_date' => '1969-08-18',
             ]); 
         }
         if (!User::where('email', 'daniel@gmail.com')->first()) 
         {
             User::create([
-                'name' => 'Daniel',
+                'name' => 'Daniel da Costa',
                 'email' => 'daniel@gmail.com',
                 'password' => '123456#A',
-                'phone' => '11999999999',
+                'phone' => '55984080462',
                 'address' => 'Rua A, 123',
                 'CPF' => '12341678900',
                 'birth_date' => '1990-01-01',
