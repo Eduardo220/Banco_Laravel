@@ -5,7 +5,7 @@
 @section('content')
 <center>
 <div id="app">
-    <h1>Bem vindo à Parkew's Bank!</h1>
+    <h1>Bem-vindo ao Parkew's Bank!</h1>
 </div>
 <div id="login">
     <h3>Faça seu login para acessar sua conta: <a href="{{ route('authentication.login') }}">Login</a></h3>
