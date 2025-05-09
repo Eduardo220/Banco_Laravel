@@ -8,7 +8,9 @@ Route::get('/', function () {
 });
 
 // Usuarios:
-Route::get('/login-authentication', [AuthenticationController::class, 'auth_login'])->name('authentication.login');
-Route::get('/register-authentication', [AuthenticationController::class, 'auth_register'])->name('authentication.register');
-Route::post('/store-register', [AuthenticationController::class, 'store'])->name('authentication.store');
- 
+Route::prefix('authentication')->group(function () 
+    {
+        Route::get('/login', [AuthenticationController::class, 'auth_login'])->name('authentication.login');
+        Route::get('/register', [AuthenticationController::class, 'auth_register'])->name('authentication.register');
+        Route::post('/store', [AuthenticationController::class, 'store'])->name('authentication.store');
+    });
