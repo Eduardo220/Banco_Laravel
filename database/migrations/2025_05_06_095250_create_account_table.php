@@ -15,9 +15,9 @@ return new class extends Migration
             $table->id();
 
             $table->foreignId('user_id')
-            ->nullable()
-            ->constrained('users')
-            ->onDelete('cascade');
+                ->nullable()
+                ->constrained('users')
+                ->onDelete('cascade');
 
             $table->string('name_account');
             $table->string('number_account')->unique();

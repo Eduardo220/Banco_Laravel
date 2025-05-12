@@ -6,7 +6,6 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Database\Eloquent\Model;
 
 class User extends Authenticatable
 {
@@ -50,22 +49,4 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
-}
-
-class Authentication extends Model
-{
-    protected $table = 'users'; // Nome da tabela no banco de dados
-    protected $fillable = [
-        'name',
-        'email',
-        'phone',
-        'address',
-        'CPF',
-        'birth_date',
-        'password',
-    ];
-    protected $hidden = [
-        'password',
-        'remember_token',
-    ];
 }
