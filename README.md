@@ -13,8 +13,6 @@ Projeto de uma aplicação bancária desenvolvida em PHP utilizando o framework 
 
 * Conta Corrente e Conta Poupança: Comportamentos distintos para diferentes tipos de contas, com regras específicas de operação.
 
-* Autenticação e Autorização: Controle de acesso baseado nos recursos nativos do Laravel (Laravel Breeze, Laravel Sanctum ou Laravel Jetstream).
-
 * Segurança de Dados: Proteção de informações sensíveis com criptografia, validações robustas e políticas de acesso.
 
 * Rotas e Controllers: Organização clara do fluxo da aplicação com as facilidades do sistema de rotas do Laravel.
