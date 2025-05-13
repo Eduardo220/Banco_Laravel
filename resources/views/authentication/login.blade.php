@@ -16,5 +16,6 @@
                 <input type="password" name="password" id="password" placeholder="Insira sua senha" required><br><br>
             </div>
             <button type="submit">Entrar</button>
+        </form>
     </center>
 </div>

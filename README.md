@@ -1,14 +1,31 @@
-# Requisitos:
-* PHP 8.2 ou superior - Conferir a versão: 
-> php -v
+# Sistema de Conta Bancária — PHP + Laravel + MySQL
 
-* Composer - Conferir a instalação:
-> composer --version
+### 📋 Descrição:
+Projeto de uma aplicação bancária desenvolvida em PHP utilizando o framework Laravel, com arquitetura baseada no padrão MVC (Model-View-Controller) e princípios de Programação Orientada a Objetos (OOP). O sistema permite o gerenciamento de contas bancárias, autenticação de usuários, consultas de saldo e operações financeiras, com foco em segurança, escalabilidade e boas práticas de desenvolvimento.
 
-* Node.js 22 ou superior - Conferir a versão:
-> node -v
+-----
 
-## Como rodar o projeto:
+### ⚙️ Funcionalidades:
+
+* Consulta de Saldo: Visualização de informações como nome do banco, número da agência, número da conta e titular da conta.
+
+* Saque e Depósito: Operações de movimentação de saldo com validações de segurança e registro de transações.
+
+* Conta Corrente e Conta Poupança: Comportamentos distintos para diferentes tipos de contas, com regras específicas de operação.
+
+* Autenticação e Autorização: Controle de acesso baseado nos recursos nativos do Laravel (Laravel Breeze, Laravel Sanctum ou Laravel Jetstream).
+
+* Segurança de Dados: Proteção de informações sensíveis com criptografia, validações robustas e políticas de acesso.
+
+* Rotas e Controllers: Organização clara do fluxo da aplicação com as facilidades do sistema de rotas do Laravel.
+
+* Migrations e Seeders: Estrutura de banco de dados gerenciada com migrations e geração de dados de teste automatizada com seeders.
+
+* Validações: Regras centralizadas e reutilizáveis para garantir a integridade dos dados em todas as operações.
+
+-----
+
+### 📜 Como rodar o projeto:
 1- Duplicar o arquivo ".env.example" e renomear para ".env";
 
 2- Alterar as credenciais do banco de dados:
@@ -49,16 +66,24 @@
 10- Acessar o conteúdo do Banco:
 * [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
-## Autor:
+-----
+
+### 🖋️ Autor:
 
 Esse projeto foi desenvolvido por [Eduardo Weissheimer](https://github.com/Eduardo220), e está hospedado no repositório [Banco-Laravel](https://github.com/Eduardo220/Banco_Laravel).
 
-## Licença
+-----
+
+### 🧾 Licença
 
 Este projeto está licenciado sob a licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
-## 🛠️ Tecnologias utilizadas:
+-----
+
+### 🛠️ Tecnologias utilizadas:
 ![PHP](https://img.shields.io/badge/%E3%85%A4%E3%85%A4PHP%E3%85%A4%E3%85%A4-%238993be?style=for-the-badge&logo=php&logoColor=white) 
 ![Laravel](https://img.shields.io/badge/%E3%85%A4LARAVEL%E3%85%A4-%23fb503b?style=for-the-badge&logo=laravel&logoColor=white) 
-![Laravel](https://img.shields.io/badge/%E3%85%A4MYSQL%E3%85%A4-%2300758f?style=for-the-badge&logo=mysql&logoColor=white) 
-![Laravel](https://img.shields.io/badge/%E3%85%A4%E3%85%A4GIT%E3%85%A4%E3%85%A4-%23f34f29?style=for-the-badge&logo=git&logoColor=white) 
+![MYSQL](https://img.shields.io/badge/%E3%85%A4MYSQL%E3%85%A4-%2300758f?style=for-the-badge&logo=mysql&logoColor=white) 
+![GIT](https://img.shields.io/badge/%E3%85%A4%E3%85%A4GIT%E3%85%A4%E3%85%A4-%23f34f29?style=for-the-badge&logo=git&logoColor=white) 
+![COMPOSER](https://img.shields.io/badge/%E3%85%A4composer%E3%85%A4-%23ac865a?style=for-the-badge&logo=composer&logoColor=white) 
+

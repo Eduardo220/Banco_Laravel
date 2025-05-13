@@ -6,25 +6,17 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class UserRequest extends FormRequest
 {
-    /**
-     * Determine if the user is authorized to make this request.
-     */
     public function authorize(): bool
     {
         return true;
     }
 
-    /**
-     * Get the validation rules that apply to the request.
-     *
-     * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
-     */
     public function rules(): array
     {
         return [ // Define as regras de validação para os campos do formulário
             'name' => 'required|string|max:255',
             'email' => 'required|email|max:255|unique:users',
-            'phone' => 'required|string|regex:/^[0-9\-\+]{9,15}$/',
+            'phone' => 'required|string|min:9|max:15|regex:/^[0-9\-\+]{9,15}$/',
             'address' => 'required|string|max:255',
             'CPF' => 'required|string|min:11|max:11|unique:users',
             'birth_date' => 'required|date',

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\UserRequest;
 use App\Models\User;
+use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
@@ -40,5 +41,22 @@ class AuthenticationController extends Controller
 
         return redirect()->route('authentication.login')
             ->with('success', 'Usuário registrado com sucesso!'); // Redireciona para a página de login com uma mensagem de sucesso
+    }
+
+    public function update_password(Request $request, User $user)
+    {
+        try {
+            $user->update([
+                'password' => $request->password,
+            ]);
+            return redirect()->route('authentication.login', ['user' => $user->id])->with('success', 'Senha atualizada com sucesso!'); // Redireciona para a página de login com uma mensagem de sucesso
+        } catch (Exception $e) {
+            return back()->withInput()->with('error', 'Erro ao atualizar senha!'); // Retorna para a página anterior com uma mensagem de erro
+        }
+    }
+
+    public function edit_password(User $user)
+    {
+        return view('authentication.edit_password', ['user' => $user]); // Retorna a view de edição de senha
     }
 }

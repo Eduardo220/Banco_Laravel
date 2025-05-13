@@ -10,25 +10,25 @@
         <form method="POST" action="{{ route('authentication.store')}}">
             @csrf
                 <label for="name">Nome: </label>
-                <input type="text" name="name" id="name" placeholder="Insira seu nome"><br><br>
-                
+                <input type="text" name="name" id="name" placeholder="Insira seu nome" required><br><br>
+
                 <label for="email">Email: </label>
-                <input type="email" name="email" id="email" placeholder="Insira seu email"><br><br>
+                <input type="email" name="email" id="email" placeholder="Insira seu email" required><br><br>
 
                 <label for="phone">Celular: </label>
-                <input type="text" name="phone" id="phone" placeholder="(55)91234-5678"><br><br>
+                <input type="text" name="phone" id="phone" minlength="9" maxlength="15" placeholder="(55)91234-5678" required><br><br>
 
                 <label for="address">Endereço: </label>
-                <input type="text" name="address" id="address" placeholder="Insira seu endereço"><br><br>
+                <input type="text" name="address" id="address" placeholder="Insira seu endereço" required><br><br>
 
                 <label for="CPF">CPF: </label>
-                <input type="int" name="CPF" id="CPF" minlength="11" maxlength="11" placeholder="Insira seu CPF"><br><br>
+                <input type="int" name="CPF" id="CPF" minlength="11" maxlength="11" placeholder="Insira seu CPF" required><br><br>
 
                 <label for="birth_date">Data de Nascimento: </label>
-                <input type="date" name="birth_date" id="birth_date"><br><br>
+                <input type="date" name="birth_date" id="birth_date" required><br><br>
 
                 <label for="password">Senha: </label>
-                <input type="password" name="password" id="password" placeholder="Insira sua senha"><br><br>
+                <input type="password" name="password" id="password" placeholder="Insira sua senha" required><br><br>
                 
                 <button type="submit">Cadastrar</button>
         </form>
