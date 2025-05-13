@@ -11,7 +11,7 @@
             @csrf
                 <label for="name">Nome: </label>
                 <input type="text" name="name" id="name" placeholder="Insira seu nome"><br><br>
-
+                
                 <label for="email">Email: </label>
                 <input type="email" name="email" id="email" placeholder="Insira seu email"><br><br>
 

@@ -49,8 +49,6 @@
 10- Acessar o conteúdo do Banco:
 * [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
-![Laravel](https://img.shields.io/badge/laravel-%23FF2D20?style=for-the-badge&logo=laravel&logoColor=white) 
-
 ## Autor:
 
 Esse projeto foi desenvolvido por [Eduardo Weissheimer](https://github.com/Eduardo220), e está hospedado no repositório [Banco-Laravel](https://github.com/Eduardo220/Banco_Laravel).
@@ -60,9 +58,7 @@ Esse projeto foi desenvolvido por [Eduardo Weissheimer](https://github.com/Eduar
 Este projeto está licenciado sob a licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
 ## 🛠️ Tecnologias utilizadas:
-<p align="center">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" width="70">       
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" width="70">       
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" width="70">           
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" width="70">   
-</p>
+![PHP](https://img.shields.io/badge/%E3%85%A4%E3%85%A4PHP%E3%85%A4%E3%85%A4-%238993be?style=for-the-badge&logo=php&logoColor=white) 
+![Laravel](https://img.shields.io/badge/%E3%85%A4LARAVEL%E3%85%A4-%23fb503b?style=for-the-badge&logo=laravel&logoColor=white) 
+![Laravel](https://img.shields.io/badge/%E3%85%A4MYSQL%E3%85%A4-%2300758f?style=for-the-badge&logo=mysql&logoColor=white) 
+![Laravel](https://img.shields.io/badge/%E3%85%A4%E3%85%A4GIT%E3%85%A4%E3%85%A4-%23f34f29?style=for-the-badge&logo=git&logoColor=white) 
