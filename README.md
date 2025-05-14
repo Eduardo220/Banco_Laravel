@@ -7,19 +7,21 @@ Projeto de uma aplicação bancária desenvolvida em PHP utilizando o framework 
 
 ### ⚙️ Funcionalidades:
 
-* Consulta de Saldo: Visualização de informações como nome do banco, número da agência, número da conta e titular da conta.
+- [x] Segurança de Dados: Proteção de informações sensíveis com criptografia, validações robustas e políticas de acesso.
 
-* Saque e Depósito: Operações de movimentação de saldo com validações de segurança e registro de transações.
+- [x] Rotas e Controllers: Organização clara do fluxo da aplicação com as facilidades do sistema de rotas do Laravel.
 
-* Conta Corrente e Conta Poupança: Comportamentos distintos para diferentes tipos de contas, com regras específicas de operação.
+- [x] Migrations e Seeders: Estrutura de banco de dados gerenciada com migrations e geração de dados de teste automatizada com seeders.
 
-* Segurança de Dados: Proteção de informações sensíveis com criptografia, validações robustas e políticas de acesso.
+- [x] Validações: Regras centralizadas e reutilizáveis para garantir a integridade dos dados em todas as operações.
 
-* Rotas e Controllers: Organização clara do fluxo da aplicação com as facilidades do sistema de rotas do Laravel.
+- [x] Cadastro/Login:  Páginas de cadastro e login funcionais, com as rotas corretas.
 
-* Migrations e Seeders: Estrutura de banco de dados gerenciada com migrations e geração de dados de teste automatizada com seeders.
+- [ ] Consulta de Saldo: Visualização de informações como nome do banco, número da agência, número da conta e titular da conta.
 
-* Validações: Regras centralizadas e reutilizáveis para garantir a integridade dos dados em todas as operações.
+- [ ] Saque e Depósito: Operações de movimentação de saldo com validações de segurança e registro de transações.
+
+- [ ] Conta Corrente e Conta Poupança: Comportamentos distintos para diferentes tipos de contas, com regras específicas de operação.
 
 -----
 
