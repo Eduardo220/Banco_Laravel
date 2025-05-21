@@ -6,9 +6,6 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
         Schema::create('users', function (Blueprint $table) {
@@ -17,7 +14,13 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('phone');
-            $table->string('address');
+            $table->string('address_street')->nullable();
+            $table->string('address_number')->nullable();
+            $table->string('address_neighborhood')->nullable();
+            $table->string('address_complement')->nullable();
+            $table->string('address_city')->nullable();
+            $table->string('address_state')->nullable();
+            $table->string('address_zip')->nullable();
             $table->string('CPF')->unique();
             $table->date('birth_date');
             $table->string('password');
@@ -44,13 +47,20 @@ return new class extends Migration
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('users');
         Schema::dropIfExists('password_reset_tokens');
         Schema::dropIfExists('sessions');
+        Schema::table('users', function (Blueprint $table) {
+        $table->dropColumn([
+            'address_street',
+            'address_number',
+            'address_neighborhood',
+            'address_complement',
+            'address_city',
+            'address_state',
+            'address_zip',]);
+        });
     }
 };

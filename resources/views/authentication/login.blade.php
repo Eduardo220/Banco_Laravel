@@ -2,7 +2,7 @@
 @section('title', 'Login')
 @section('content')
 <div>
-    <center>
+<center>
         <h1>Faça seu login para acessar sua conta</h1>
         <x-alert />
         <form method="POST" action="">
@@ -17,5 +17,7 @@
             </div>
             <button type="submit">Entrar</button>
         </form>
-    </center>
+        <p>eduardo@gmail.com</p>
+        <p>123456#A</p>
+</center>
 </div>
