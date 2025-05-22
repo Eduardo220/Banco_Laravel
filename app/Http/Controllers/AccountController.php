@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Account;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 
 class AccountController extends Controller
 {
@@ -12,7 +13,8 @@ class AccountController extends Controller
     {
         return view('account.current'); // Retorna a view de conta corrente
     }
-    public function current_create(Request $request)
+
+    public function current_create(Account $request)
     {
         if (!Auth::check()) 
         {
@@ -31,7 +33,7 @@ class AccountController extends Controller
         }
 
         // Se não tem, cria a conta corrente
-        Account::create([
+        $account = Account::create([
             'user_id' => Auth::id(), // ou null se não estiver logado
             'name_account' => 'Conta Corrente',
             'number_account' => rand(1000000000, 9999999999), // Gera um número de conta aleatório
@@ -40,11 +42,18 @@ class AccountController extends Controller
             'balance_account' => 0,
             'status_account' => 'ativa',
         ]);
+        // Salva a log
+        Log::info('Conta corrente criada com sucesso!', ['user_id' => $account->id]);
 
         return redirect()->route('home.index')->with('success', 'Conta corrente criada com sucesso!');
     }
 
-    public function savings_create()
+    public function savings()
+    {
+        return view('account.savings'); // Retorna a view de conta poupança
+    }
+    
+    public function savings_create(Account $request)
     {
         if (!Auth::check()) 
         {
@@ -63,7 +72,7 @@ class AccountController extends Controller
         }
 
         // Se não tem, cria a conta poupança
-        Account::create([
+        $account = Account::create([
             'user_id' => Auth::id(), // ou null se não estiver logado
             'name_account' => 'Conta Poupança',
             'number_account' => rand(1000000000, 9999999999), // Gera um número de conta aleatório
@@ -72,13 +81,9 @@ class AccountController extends Controller
             'balance_account' => 0,
             'status_account' => 'ativa',
         ]);
+        // Salva a log
+        Log::info('Conta poupança criada com sucesso!', ['user_id' => $account->id]);
 
         return redirect()->route('home.index')->with('success', 'Conta poupança criada com sucesso!');
     }
-
-    public function savings()
-    {
-        return view('account.savings'); // Retorna a view de conta poupança
-    }
-
 }
