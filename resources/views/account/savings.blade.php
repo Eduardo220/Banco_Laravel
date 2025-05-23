@@ -33,8 +33,8 @@
         </p>
         <form action="{{ route('account.savings_create') }}" method="post">
         @csrf
-            <button type="submit">Criar Conta Poupança</button>
-        </form>
+            <button type="submit">Criar Conta Poupança</button><br><br>
+            <a href="{{ route('home.index') }}" class="btn btn-secondary">Voltar</a>
     </div>
 </center>
 @endsection

@@ -3,6 +3,7 @@
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\AuthenticationController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -38,4 +39,6 @@ Route::group(['middleware' => 'auth'], function ()
         Route::get('/savings', [AccountController::class, 'savings'])->name('account.savings');
         Route::post('/savings_create', [AccountController::class, 'savings_create'])->name('account.savings_create');
     });
+    
+    Route::get('profile', [ProfileController::class, 'profile'])->name('profile.index');   
 });

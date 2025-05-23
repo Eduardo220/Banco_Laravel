@@ -5,11 +5,11 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class HomeController extends Controller
+class ProfileController extends Controller
 {
-    public function index(Request $request)
+    public function profile()
     {
         $user = Auth::user(); // Recupera o usuário autenticado
-        return view('home.index', compact('user'));
+        return view('profile.index', compact('user'));
     }
 }

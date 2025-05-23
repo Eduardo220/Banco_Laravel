@@ -33,7 +33,8 @@
         </p>
         <form action="{{ route('account.current_create') }}" method="POST">
         @csrf
-            <button type="submit">Criar Conta Corrente</button>
+            <button type="submit">Criar Conta Corrente</button><br><br>
         </form>
+        <a href="{{ route('home.index') }}" class="btn btn-secondary">Voltar</a>
     </div>
 </center>
