@@ -7,8 +7,7 @@
 <center>
     <x-alert />
     <div>
-        <h1>Conta Poupança</h1>
-        <h3>Olá {{  $user->name  }}</h3>
+        <h1>Olá {{  $user->name  }} - Conta Poupança</h1>
         <p><strong>Número da conta: </strong> {{  $account->number_account }}</p>
         <p><strong>Agência: </strong> {{  $account->agency_account }}</p>
         <p><strong>Saldo: </strong> R$ {{  number_format($account->balance_account, 2, ',', '.') }}</p>
