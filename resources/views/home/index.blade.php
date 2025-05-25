@@ -13,6 +13,15 @@
         </a>
 </div>
 <div>
+    <h3>Deseja ver suas contas?</h3>
+        <a href="{{ route('account.index_current') }}">
+            <button type="button">Ver conta corrente</button>
+        </a>
+        <a href="{{ route('account.index_savings') }}">
+            <button type="button">Ver conta poupança</button>
+        </a>
+</div>
+<div>
     <h3>Deseja abrir uma conta?</h3>
     <p><strong>Escolha o tipo de conta que deseja abrir:</strong><br><br>
         <a href="{{ route('account.current') }}">

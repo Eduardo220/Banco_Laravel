@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -25,6 +26,36 @@ class User extends Authenticatable
         'birth_date',
         'password',
     ];
+
+    protected function cpf(): Attribute
+    {
+        return Attribute::get(fn ($value) 
+        => preg_replace("/(\d{3})(\d{3})(\d{3})(\d{2})/",
+            "$1.$2.$3-$4",
+            $value));
+    }
+
+    protected function phone(): Attribute
+    {
+        return Attribute::get(fn ($value) 
+        => preg_replace("/(\d{2})(\d{5})(\d{4})/",
+            "($1) $2-$3",
+            $value));
+    }
+
+    protected function addressZip(): Attribute
+    {
+        return Attribute::get(fn ($value)
+        => preg_replace("/(\d{5})(\d{3})/",
+            "$1-$2",
+            $value));
+    }
+
+    protected function birthDate(): Attribute
+    {
+        return Attribute::get(
+            fn ($value) => \Carbon\Carbon::parse($value)->format('d-m-Y'));
+    }
 
     protected $hidden = [
         'password',

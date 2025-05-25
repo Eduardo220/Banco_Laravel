@@ -28,7 +28,9 @@ Route::prefix('authentication')
 // Grupo de rotas restritas a usuários autenticados
 Route::group(['middleware' => 'auth'], function () 
 {
+    // Rota para a página inicial após o login
     Route::get('/home', [HomeController::class, 'index'])->name('home.index');
+
 
     Route::prefix('account')
     ->group(function ()
@@ -38,7 +40,14 @@ Route::group(['middleware' => 'auth'], function ()
         
         Route::get('/savings', [AccountController::class, 'savings'])->name('account.savings');
         Route::post('/savings_create', [AccountController::class, 'savings_create'])->name('account.savings_create');
+
+        Route::get('/index_current', [AccountController::class, 'index_current'])->name('account.index_current');
+        Route::get('/index_savings', [AccountController::class, 'index_savings'])->name('account.index_savings');
+
     });
     
+    // Rota para o perfil do usuário
     Route::get('profile', [ProfileController::class, 'profile'])->name('profile.index');   
+    Route::get('profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::put('profile', [ProfileController::class, 'update'])->name('profile.update');
 });

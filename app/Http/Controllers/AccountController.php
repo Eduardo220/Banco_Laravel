@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Account;
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
 
@@ -85,5 +86,27 @@ class AccountController extends Controller
         Log::info('Conta poupança criada com sucesso!', ['user_id' => $account->id]);
 
         return redirect()->route('home.index')->with('success', 'Conta poupança criada com sucesso!');
+    }
+
+    public function index_current()
+    {
+        $user = Auth::user(); // Usuário autenticado
+
+        $account = Account::where('user_id', $user->id)
+                        ->where('type_account', 'corrente') // Pega a conta corrente do usuário
+                        ->first();
+                        
+        return view('account.index_current', compact('user', 'account'));
+    }
+
+    public function index_savings()
+    {
+        $user = Auth::user(); // Usuário autenticado
+
+        $account = Account::where('user_id', $user->id)
+                        ->where('type_account', 'poupança') // Pega a conta corrente do usuário
+                        ->first();
+
+        return view('account.index_savings', compact('user', 'account'));
     }
 }

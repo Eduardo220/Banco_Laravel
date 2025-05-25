@@ -23,7 +23,7 @@ class UserRequest extends FormRequest
             'address_complement' => 'nullable|string|max:255',
             'address_city' => 'nullable|string|max:255',
             'address_state' => 'nullable|string|max:255',
-            'address_zip' => 'nullable|string|max:20',
+            'address_zip' => 'nullable|string|max:9|regex:/^[0-9]{5}-[0-9]{3}$/',
             'CPF' => 'required|string|min:11|max:11|unique:users',
             'birth_date' => 'required|date',
             'password' => 'required|string|min:6',

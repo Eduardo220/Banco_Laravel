@@ -5,11 +5,11 @@
 <center>
         <h1>Faça seu login para acessar sua conta</h1>
         <x-alert />
-        <form method="POST" action="">
+        <form method="POST" action="{{ route('authentication.login.post')}}">
             @csrf
             <div>
                 <label for="email">Email: </label>
-                <input type="email" name="email" id="email" placeholder="Insira seu email" required><br><br>
+                <input type="email" name="email" id="email" placeholder="Insira seu email" value="{{ old('email') }}" required><br><br>
             </div>
             <div>
                 <label for="password">Senha: </label>
