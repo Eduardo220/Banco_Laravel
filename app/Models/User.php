@@ -55,6 +55,7 @@ class User extends Authenticatable
     {
         return Attribute::get(
             fn ($value) => \Carbon\Carbon::parse($value)->format('d-m-Y'));
+            
     }
 
     protected $hidden = [

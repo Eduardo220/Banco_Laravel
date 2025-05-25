@@ -88,6 +88,15 @@ class AccountController extends Controller
         return redirect()->route('home.index')->with('success', 'Conta poupança criada com sucesso!');
     }
 
+    public function index()
+    {
+        $user = Auth::user(); // Usuário autenticado
+        
+        $accounts = Account::where('user_id', $user->id)->get(); // Pega todas as contas do usuário
+        
+        return view('account.index', compact('user'));
+    }
+
     public function index_current()
     {
         $user = Auth::user(); // Usuário autenticado
@@ -95,6 +104,12 @@ class AccountController extends Controller
         $account = Account::where('user_id', $user->id)
                         ->where('type_account', 'corrente') // Pega a conta corrente do usuário
                         ->first();
+        if (!$account) {
+            return redirect()->route('account.index')->with('error', 'Você não possui uma conta corrente. Crie uma primeiro.');
+        }
+        
+        // Salva a log
+        Log::info('Acessou a conta corrente', ['user_id' => $user->id]);
                         
         return view('account.index_current', compact('user', 'account'));
     }
@@ -106,6 +121,12 @@ class AccountController extends Controller
         $account = Account::where('user_id', $user->id)
                         ->where('type_account', 'poupança') // Pega a conta corrente do usuário
                         ->first();
+        if (!$account) {
+            return redirect()->route('account.index')->with('error', 'Você não possui uma conta poupança. Crie uma primeiro.');
+        }
+        
+        // Salva a log
+        Log::info('Acessou a conta poupança', ['user_id' => $user->id]);
 
         return view('account.index_savings', compact('user', 'account'));
     }

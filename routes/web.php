@@ -21,7 +21,7 @@ Route::prefix('authentication')
         
         Route::get('/edit_password', [AuthenticationController::class, 'edit_password'])->name('authentication.edit_password');
         Route::put('/{user}/update_password', [AuthenticationController::class, 'update_password'])->name('authentication.update_password');
-        Route::post('/login', [AuthenticationController::class, 'login'])->name('authentication.login.post');
+        Route::post('/login', [AuthenticationController::class, 'login_post'])->name('authentication.login.post');
     });
 
 
@@ -41,6 +41,7 @@ Route::group(['middleware' => 'auth'], function ()
         Route::get('/savings', [AccountController::class, 'savings'])->name('account.savings');
         Route::post('/savings_create', [AccountController::class, 'savings_create'])->name('account.savings_create');
 
+        Route::get('/index', [AccountController::class, 'index'])->name('account.index');
         Route::get('/index_current', [AccountController::class, 'index_current'])->name('account.index_current');
         Route::get('/index_savings', [AccountController::class, 'index_savings'])->name('account.index_savings');
 

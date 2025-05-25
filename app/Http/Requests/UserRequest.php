@@ -23,9 +23,9 @@ class UserRequest extends FormRequest
             'address_complement' => 'nullable|string|max:255',
             'address_city' => 'nullable|string|max:255',
             'address_state' => 'nullable|string|max:255',
-            'address_zip' => 'nullable|string|max:9|regex:/^[0-9]{5}-[0-9]{3}$/',
+            'address_zip' => 'nullable|string|max:9',
             'CPF' => 'required|string|min:11|max:11|unique:users',
-            'birth_date' => 'required|date',
+            'birth_date' => ['required', 'date', 'before_or_equal:today', 'before:' . now()->subYears(18)->format('Y-m-d')],
             'password' => 'required|string|min:6',
         ];
     }
@@ -52,6 +52,8 @@ class UserRequest extends FormRequest
             
             'birth_date.required' => 'O campo data de nascimento é obrigatório.',
             'birth_date.date' => 'O campo deve ser uma data válida.',
+            'birth_date.before' => 'Você precisa ter pelo menos 18 anos para se cadastrar.',
+            'birth_date.before_or_equal' => 'A data de nascimento não pode ser no futuro.',
 
             'password.required' => 'O campo senha é obrigatório.',
             'password.string' => 'O campo deve conter letras.',

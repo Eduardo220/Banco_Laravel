@@ -53,7 +53,7 @@ class AuthenticationController extends Controller
         }
     }
 
-    public function login(Request $request)
+    public function login_post(Request $request)
     {
         $credentials = $request->only('email', 'password'); // Obtém as credenciais do formulário
 

@@ -13,3 +13,6 @@
         <p><strong>Saldo: </strong> R$ {{  number_format($account->balance_account, 2, ',', '.') }}</p>
         <p><strong>Data de abertura: </strong> {{  date('d/m/Y', strtotime($account->created_at)) }}</p>
     </div>
+    <div>
+        <a href="{{ route('home.index') }}" class="btn btn-secondary">Voltar</a>
+    </div>
