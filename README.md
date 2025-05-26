@@ -17,7 +17,7 @@ Projeto de uma aplicação bancária desenvolvida em PHP utilizando o framework 
 
 - [x] Cadastro/Login:  Páginas de cadastro e login funcionais, com as rotas corretas.
 
-- [ ] Consulta de Saldo: Visualização de informações como nome do banco, número da agência, número da conta e titular da conta.
+- [x] Consulta de Saldo: Visualização de informações como nome do banco, número da agência, número da conta e titular da conta.
 
 - [ ] Saque e Depósito: Operações de movimentação de saldo com validações de segurança e registro de transações.
 
