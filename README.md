@@ -21,7 +21,7 @@ Projeto de uma aplicação bancária desenvolvida em PHP utilizando o framework 
 
 - [ ] Saque e Depósito: Operações de movimentação de saldo com validações de segurança e registro de transações.
 
-- [ ] Conta Corrente e Conta Poupança: Comportamentos distintos para diferentes tipos de contas, com regras específicas de operação.
+- [x] Conta Corrente e Conta Poupança: Comportamentos distintos para diferentes tipos de contas, com regras específicas de operação.
 
 -----
 
