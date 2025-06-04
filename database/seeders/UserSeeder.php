@@ -8,9 +8,6 @@ use Illuminate\Database\Seeder;
 
 class UserSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
     public function run(): void
     {
         if (!User::where('email', 'eduardo@gmail.com')->first()) 

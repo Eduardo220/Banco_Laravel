@@ -6,14 +6,17 @@
     <title>Parkew's Bank - @yield('title')</title>
 </head>
 <body>
-    <div class="container">
+    <div class="content">
         @yield('content')
     </div>
-    <footer>
-        <center>
-        <p>&copy; 2025 Parkew's Bank. Todos os direitos reservados.</p>
-        <p>Desenvolvido por Parkew.</p
-        </center>
-    </footer>
+    <div class="footer">
+        @yield('footer')
+        <footer>
+            <center>
+                <p>&copy; 2025 Parkew's Bank. Todos os direitos reservados.</p>
+                <p>Desenvolvido por Parkew.</p
+        <   /center>
+        </footer>
+    </div>
 </body>
 </html>

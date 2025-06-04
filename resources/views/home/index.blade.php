@@ -1,10 +1,11 @@
 @extends('layouts.admin')
 @section('title', 'Home')
+@section('header')
+@endsection
 @section('content')
 <center>
 <div>
-        <h1>Bem vindo {{  $user->name  }}</h1>
-        <x-alert />
+    <h1>Bem vindo {{  $user->name  }}</h1>
 </div>
 <div>
     <h3>Deseja ver seu perfil?</h3>
@@ -22,3 +23,6 @@
         </a>
 </div>
 </center>
+@endsection
+@section('footer')
+@endsection

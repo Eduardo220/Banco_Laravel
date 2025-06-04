@@ -4,6 +4,7 @@ use App\Http\Controllers\AccountController;
 use App\Http\Controllers\AuthenticationController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -48,7 +49,22 @@ Route::group(['middleware' => 'auth'], function ()
     });
     
     // Rota para o perfil do usuário
-    Route::get('profile', [ProfileController::class, 'profile'])->name('profile.index');   
-    Route::get('profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::put('profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::prefix('profile')
+    ->group(function () 
+    {
+        Route::get('/', [ProfileController::class, 'profile'])->name('profile.index');   
+        Route::get('/edit', [ProfileController::class, 'edit'])->name('profile.edit');
+        Route::put('/', [ProfileController::class, 'update'])->name('profile.update');
+    });
+
+    Route::prefix('transaction')
+    ->group(function () 
+    {
+        Route::get('/deposit', [TransactionController::class, 'deposit'])->name('transaction.deposit');
+        Route::post('/deposit_create', [TransactionController::class, 'deposit_create'])->name('transaction.deposit.create');
+        Route::get('/withdraw', [TransactionController::class, 'withdraw'])->name('transaction.withdraw');
+        Route::post('/withdraw_create', [TransactionController::class, 'withdraw_create'])->name('transaction.withdraw.create');
+        Route::get('/transfer', [TransactionController::class, 'transfer'])->name('transaction.transfer');
+        Route::post('/transfer_create', [TransactionController::class, 'transfer_create'])->name('transaction.transfer.create');
+    });
 });
