@@ -1,7 +1,5 @@
 @extends('layouts.admin')
-
 @section('title', 'Bem-vindo')
-
 @section('content')
 <center>
 <div id="app">
@@ -15,3 +13,6 @@
 </div>
 </center>
 @endsection
+@section('footer')
+@endsection
+

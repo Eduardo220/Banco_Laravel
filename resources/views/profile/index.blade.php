@@ -15,9 +15,13 @@
                                     - {{ $user->address_state }}, CEP: {{ $user->address_zip }}</p>
         <p><strong>CPF: </strong>{{ $user->CPF }}</p>
         <p><strong>Data de Nascimento: </strong>{{ $user->birth_date }}</p>
+    </div>
+    <div class="buttons">
         
-
-        <a href="{{ route('profile.edit') }}" class="btn btn-primary">Editar Perfil</a>
-        <a href="{{ route('home.index') }}" class="btn btn-secondary">Voltar</a>
+        <a href="{{ route('profile.edit') }}"><button type="button">Editar Perfil</button></a>
+        <a href="{{ route('home.index') }}"><button type="button">Voltar</button></a>
     </div>
 </center>
+@endsection
+@section('footer')
+@endsection

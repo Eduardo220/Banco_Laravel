@@ -29,14 +29,10 @@ class AccountController extends Controller
             ->where('type_account', 'corrente')
             ->first();
 
-        if ($existingAccount) {
-            return redirect()->route('home.index')->with('error', 'Você já possui uma conta corrente criada.');
-        }
-
-        // Se não tem, cria a conta corrente
-        $account = Account::create([
+        // Cria a conta corrente
+        $account_current = Account::create([
             'user_id' => Auth::id(), // ou null se não estiver logado
-            'name_account' => 'Conta Corrente',
+            'name_account' => Auth::user()->name,
             'number_account' => rand(1000000000, 9999999999), // Gera um número de conta aleatório
             'type_account' => 'corrente',
             'agency_account' => 1001,   
@@ -44,7 +40,7 @@ class AccountController extends Controller
             'status_account' => 'ativa',
         ]);
         // Salva a log
-        Log::info('Conta corrente criada com sucesso!', ['user_id' => $account->id]);
+        Log::info('Conta corrente criada com sucesso!', ['user_id' => $account_current->id]);
 
         return redirect()->route('home.index')->with('success', 'Conta corrente criada com sucesso!');
     }
@@ -68,14 +64,10 @@ class AccountController extends Controller
             ->where('type_account', 'poupança')
             ->first();
 
-        if ($existingAccount) {
-            return redirect()->route('home.index')->with('error', 'Você já possui uma conta poupança criada.');
-        }
-
-        // Se não tem, cria a conta poupança
-        $account = Account::create([
+        // Cria a conta poupança
+        $account_saving = Account::create([
             'user_id' => Auth::id(), // ou null se não estiver logado
-            'name_account' => 'Conta Poupança',
+            'name_account' => Auth::user()->name,
             'number_account' => rand(1000000000, 9999999999), // Gera um número de conta aleatório
             'type_account' => 'poupança',
             'agency_account' => 1001,
@@ -83,7 +75,7 @@ class AccountController extends Controller
             'status_account' => 'ativa',
         ]);
         // Salva a log
-        Log::info('Conta poupança criada com sucesso!', ['user_id' => $account->id]);
+        Log::info('Conta poupança criada com sucesso!', ['user_id' => $account_saving->id]);
 
         return redirect()->route('home.index')->with('success', 'Conta poupança criada com sucesso!');
     }
@@ -100,7 +92,6 @@ class AccountController extends Controller
     public function index_current()
     {
         $user = Auth::user(); // Usuário autenticado
-
         $account = Account::where('user_id', $user->id)
                         ->where('type_account', 'corrente') // Pega a conta corrente do usuário
                         ->first();

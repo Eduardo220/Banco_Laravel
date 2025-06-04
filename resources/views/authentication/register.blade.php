@@ -52,3 +52,6 @@
         </form>
     </div>
 </center>
+@endsection
+@section('footer')
+@endsection
