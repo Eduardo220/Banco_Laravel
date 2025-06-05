@@ -19,8 +19,10 @@ Projeto de uma aplicação bancária desenvolvida em PHP utilizando o framework 
 
 - [x] Consulta de Saldo: Visualização de informações como nome do banco, número da agência, número da conta e titular da conta.
 
-- [ ] Saque e Depósito: Operações de movimentação de saldo com validações de segurança e registro de transações.
+- [x] Saque e Depósito: Operações de movimentação de saldo com validações de segurança e registro de transações.
 
+- [x] Transferencia: Operações de movimentação de saldo entre usuários, através de transferencias com validações de segurança e registro de transações.
+    
 - [x] Conta Corrente e Conta Poupança: Comportamentos distintos para diferentes tipos de contas, com regras específicas de operação.
 
 -----
@@ -86,4 +88,3 @@ Este projeto está licenciado sob a licença MIT - veja o arquivo [LICENSE](LICE
 ![MYSQL](https://img.shields.io/badge/%E3%85%A4MYSQL%E3%85%A4-%2300758f?style=for-the-badge&logo=mysql&logoColor=white) 
 ![GIT](https://img.shields.io/badge/%E3%85%A4%E3%85%A4GIT%E3%85%A4%E3%85%A4-%23f34f29?style=for-the-badge&logo=git&logoColor=white) 
 ![COMPOSER](https://img.shields.io/badge/%E3%85%A4composer%E3%85%A4-%23ac865a?style=for-the-badge&logo=composer&logoColor=white) 
-
