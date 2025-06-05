@@ -1,5 +1,7 @@
 @extends('layouts.admin')
 @section('title', 'Login')
+@section('header')
+@endsection
 @section('content')
 <div>
 <center>
@@ -17,7 +19,8 @@
             </div>
             <button type="submit">Entrar</button>
         </form>
-        <p>eduardo@gmail.com</p>
-        <p>123456#A</p>
 </center>
 </div>
+@endsection
+@section('footer')
+@endsection

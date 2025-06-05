@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Route;
 
 //Tela de boas-vindas
 Route::get('/', [WelcomeController::class, 'index'])->name('welcome'); 
-
+Route::get('/logout', [AuthenticationController::class, 'logout'])->name('logout');
 
 // Tela de autenticação
 Route::prefix('authentication')
@@ -19,12 +19,8 @@ Route::prefix('authentication')
         Route::get('/login', [AuthenticationController::class, 'auth_login'])->name('authentication.login');
         Route::get('/register', [AuthenticationController::class, 'auth_register'])->name('authentication.register');
         Route::post('/store', [AuthenticationController::class, 'store'])->name('authentication.store');
-        
-        Route::get('/edit_password', [AuthenticationController::class, 'edit_password'])->name('authentication.edit_password');
-        Route::put('/{user}/update_password', [AuthenticationController::class, 'update_password'])->name('authentication.update_password');
         Route::post('/login', [AuthenticationController::class, 'login_post'])->name('authentication.login.post');
     });
-
 
 // Grupo de rotas restritas a usuários autenticados
 Route::group(['middleware' => 'auth'], function () 

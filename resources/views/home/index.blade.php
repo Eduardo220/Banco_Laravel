@@ -22,6 +22,11 @@
         <a href="{{ route('account.index_savings') }}">
             <button type="button">Ver conta poupança</button>
         </a>
+</div><br>
+<div>
+    <a href="{{ route('logout') }}">
+        <button type="button">Sair</button>
+    </a>
 </div>
 </center>
 @endsection

@@ -8,7 +8,6 @@ use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
-use Throwable;
 
 class AuthenticationController extends Controller
 {
@@ -71,20 +70,10 @@ class AuthenticationController extends Controller
             }
     }
 
-    public function update_password(Request $request, User $user)
+    public function logout()
     {
-        try {
-            $user->update([
-                'password' => bcrypt($request->password),
-            ]);
-            return redirect()->route('authentication.login', ['user' => $user->id])->with('success', 'Senha atualizada com sucesso!'); // Redireciona para a página de login com uma mensagem de sucesso
-        } catch (Exception $e) {
-            return back()->withInput()->with('error', 'Erro ao atualizar senha!'); // Retorna para a página anterior com uma mensagem de erro
-        }
-    }
-
-    public function edit_password(User $user)
-    {
-        return view('authentication.edit_password', ['user' => $user]); // Retorna a view de edição de senha
+        Log::notice('Logout', ['user_id' => Auth::id()]);
+        Auth::logout();
+        return redirect()->route('welcome')->with('success', 'Usuário deslogado!');
     }
 }
