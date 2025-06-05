@@ -45,7 +45,6 @@ Route::group(['middleware' => 'auth'], function ()
         Route::get('/index', [AccountController::class, 'index'])->name('account.index');
         Route::get('/index_current', [AccountController::class, 'index_current'])->name('account.index_current');
         Route::get('/index_savings', [AccountController::class, 'index_savings'])->name('account.index_savings');
-
     });
     
     // Rota para o perfil do usuário
@@ -60,10 +59,10 @@ Route::group(['middleware' => 'auth'], function ()
     Route::prefix('transaction')
     ->group(function () 
     {
-        Route::get('/deposit', [TransactionController::class, 'deposit'])->name('transaction.deposit');
-        Route::post('/deposit_create', [TransactionController::class, 'deposit_create'])->name('transaction.deposit.create');
-        Route::get('/withdraw', [TransactionController::class, 'withdraw'])->name('transaction.withdraw');
-        Route::post('/withdraw_create', [TransactionController::class, 'withdraw_create'])->name('transaction.withdraw.create');
+        Route::get('/deposit/{type_account}', [TransactionController::class, 'deposit'])->name('transaction.deposit');
+        Route::post('/deposit_create/{type_account}', [TransactionController::class, 'deposit_create'])->name('transaction.deposit.create');
+        Route::get('/withdraw/{type_account}', [TransactionController::class, 'withdraw'])->name('transaction.withdraw');
+        Route::post('/withdraw_create/{type_account}', [TransactionController::class, 'withdraw_create'])->name('transaction.withdraw.create');
         Route::get('/transfer', [TransactionController::class, 'transfer'])->name('transaction.transfer');
         Route::post('/transfer_create', [TransactionController::class, 'transfer_create'])->name('transaction.transfer.create');
     });

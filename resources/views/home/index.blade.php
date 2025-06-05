@@ -6,6 +6,7 @@
 <center>
 <div>
     <h1>Bem vindo {{  $user->name  }}</h1>
+    <x-alert />
 </div>
 <div>
     <h3>Deseja ver seu perfil?</h3>

@@ -6,9 +6,6 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
         Schema::create('account', function (Blueprint $table) {
@@ -25,13 +22,11 @@ return new class extends Migration
             $table->integer('agency_account');
             $table->decimal('balance_account', 15, 2)->default(0); // mais seguro que float
             $table->string('status_account')->default('ativa');   // opcional: define valor padrão
+            $table->unique(['user_id', 'type_account']);
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('account');
