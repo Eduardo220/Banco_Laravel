@@ -7,6 +7,8 @@ Projeto de uma aplicação bancária desenvolvida em PHP utilizando o framework 
 
 ### ⚙️ Funcionalidades:
 
+- [x] Logs e Debug: Utilização de logs no Laravel para registro de eventos e erros, facilitando a análise e manutenção do sistema.
+
 - [x] Segurança de Dados: Proteção de informações sensíveis com criptografia, validações robustas e políticas de acesso.
 
 - [x] Rotas e Controllers: Organização clara do fluxo da aplicação com as facilidades do sistema de rotas do Laravel.
